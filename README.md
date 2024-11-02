@@ -27,7 +27,7 @@ Simply clone the repository and open the `index.html` file in your browser to se
 
 ```sh
 # Clone this repository
-git clone <repository_url>
+git clone <https://github.com/alexanderuk82/flip-card>
 
 # Open the project
 double-click index.html or open it with your preferred web server.
@@ -41,7 +41,7 @@ The flip card was initially designed in Figma, allowing for a detailed and visua
 
 For a detailed step-by-step guide on how we designed and coded this modern flip card, check out my YouTube channel:
 
-[Watch the Flip Card Tutorial](https://www.youtube.com/channel/your_channel_link)
+[Watch the Flip Card Tutorial](https://www.youtube.com/@uxuiconexioncreativa/videos)
 
 Make sure to **like, share, and subscribe** for more tutorials on modern web design!
 
@@ -55,5 +55,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Connect with Me
 
-- [YouTube Channel](https://www.youtube.com/channel/your_channel_link) - Tutorials on web design and development.
-- [Figma Designs](https://figma.com/your_figma_profile) - Follow for upcoming project designs.
+- [YouTube Channel](https://www.youtube.com/@uxuiconexioncreativa/videos) - Tutorials on web design and development.
+- [Figma Designs](https://www.figma.com/@alexandersstudi) - Follow for upcoming project designs.
