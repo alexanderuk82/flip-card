@@ -1,0 +1,165 @@
+/* 1. Reset default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 2. Setup body layout and background */
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, sans-serif;
+	background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
+	padding: 2rem;
+}
+
+/* 3. Define main card container */
+.card {
+	width: 18.75rem; /* 300px */
+	height: 25rem; /* 400px */
+	perspective: 62.5rem; /* 1000px */
+}
+
+/* 4. Setup card inner container for 3D effect */
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+
+/* 5. Add hover animation */
+.card:hover .card-inner {
+	transform: rotateY(180deg);
+}
+
+/* 6. Setup common styles for card faces */
+.card-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 0.9375rem; /* 15px */
+	box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.1); /* 15px 35px */
+	overflow: hidden;
+}
+
+/* 7. Style front face of card */
+.card-front {
+	background: white;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 8. Style card image */
+.card-front img {
+	width: 100%;
+	height: 11.25rem; /* 180px */
+	object-fit: cover;
+	border-radius: 0.625rem; /* 10px */
+	margin-bottom: 1rem;
+	transition: transform 0.3s ease;
+}
+
+/* 9. Add image hover effect */
+.card:hover .card-front img {
+	transform: scale(1.05);
+}
+
+/* 10. Style front face typography */
+.card-front h2 {
+	color: #1a202c;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.card-front p {
+	color: #4a5568;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	flex-grow: 1;
+}
+
+/* 11. Style price element */
+.price {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #4f46e5;
+	margin-top: 1rem;
+}
+
+/* 12. Style back face of card */
+.card-back {
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+	color: white;
+	transform: rotateY(180deg);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 13. Style back face typography */
+.card-back h2 {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+/* 14. Style features list */
+.features {
+	list-style: none;
+	flex-grow: 1;
+}
+
+.features li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.25rem;
+	text-align: left;
+}
+
+.features svg {
+	width: 1.25rem; /* 20px */
+	height: 1.25rem; /* 20px */
+	flex-shrink: 0;
+}
+
+/* 15. Style buy button */
+.buy-button {
+	background: white;
+	color: #4f46e5;
+	border: none;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem; /* 8px */
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	margin-top: auto;
+}
+
+/* 16. Add button hover effect */
+.buy-button:hover {
+	transform: translateY(-0.125rem); /* -2px */
+	box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1); /* 5px 15px */
+}
+
+/* 17. Add responsive styles */
+@media (max-width: 30rem) {
+	/* 480px */
+	.card {
+		width: 17.5rem; /* 280px */
+		height: 23.75rem; /* 380px */
+	}
+
+	.card-front img {
+		height: 10rem; /* 160px */
+	}
+}
